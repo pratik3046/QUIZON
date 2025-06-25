@@ -1,0 +1,193 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&family=Noto+Serif+Todhri&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    max-width: 100vw;
+    height: 100vh;
+    width: unset;
+   background: #4e54c8;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #8f94fb, #4e54c8);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #8f94fb, #4e54c8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    background-size:cover;
+    background-position: center;
+    overflow: none;
+    
+    
+}
+header{
+     background: rgba(138, 162, 255, 0.908);
+     backdrop-filter:blur(15px) ;
+}
+
+.navbar h1{
+    font-size: 40px;
+    font-weight: 900;
+    font-weight: bold;
+    background-image: url(bg.jpeg);
+    background-size: cover;
+    /* background-position: center; */
+    background-clip: text;
+    -webkit-background-clip: text;
+    color:transparent;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 1rem;
+    font-weight: 200;
+}
+a:hover{
+    color: rgb(255, 187, 0);
+}
+/* header */
+header{
+    position: relative;
+    padding: 0 2rem;
+}
+.navbar{
+    width: 100%;
+    height: 60px;
+    max-width:1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo h1{
+    
+    font-weight: bold;
+}
+.navbar .links{
+    font-size:1rem;
+    display: flex;
+    gap: 2rem;
+}
+.navbar .toggle_btn{
+    color:aliceblue;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+/* DROPDOWN MENU */
+.dropdown_menu{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    width: 300px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter:blur(15px) ;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height .2s cubic-bezier(1, 0, 0, 1);
+    height: 0;
+}
+.dropdown_menu li{
+    padding: 0.7rem;
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.dropdown_menu.open{
+    height: 130px;
+}
+
+main{
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ .box{
+    width: unset;
+    height: 400px;
+    max-width: 400px;
+    background-color: #646bfed3;
+    padding: 30px;
+    overflow: hidden;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgb(216, 176, 255);
+    
+ }
+ main{
+     padding: 0.7rem;
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+     left:2rem;
+        width: unset;
+    text-align: center;
+ }
+main h1{
+    color: aliceblue;
+    /* text-shadow:3px 3px 10px rgb(216, 176, 255); */
+}
+.btn1{
+    color: rgba(207, 33, 255, 0.62);
+    width: 200px;
+    height: 30px;
+    border:3px solid whitesmoke;
+    background-color: #e190ff;
+    border-radius: 30px;
+    
+}
+main.btn1:hover{
+     width: 240px;
+    height: 36px;
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+    transition:width 1s,height 1s;
+}
+
+/* RESPONSIVE */
+@media(max-width:992px){
+    .navbar .links{
+        display: none;
+    }
+.navbar .toggle_btn{
+    display: block;
+}
+.dropdown_menu{
+    display: block;
+}
+#close-icon{
+    display: none;
+}
+}
+@media(max-width:576px){
+    .dropdown_menu{
+        left:2rem;
+        width: unset;
+    }
+    .box{
+        width: 300px;
+        height: 400px;
+        
+    }
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
